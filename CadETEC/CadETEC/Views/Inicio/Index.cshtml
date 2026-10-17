@@ -1,0 +1,39 @@
+@{
+    ViewBag.Title = "Início";
+}
+
+<div class="cad-hero p-5 mb-4">
+    <h1 class="display-5 fw-bold">CadETEC</h1>
+    <p class="lead mb-4">Aplicação ASP.NET MVC em 3 camadas (Model.Dao, Model.Entity e Model.Neg) com banco de dados SQL Server.</p>
+    <a class="btn btn-light btn-lg" href="@Url.Action("Index", "Cliente")"><i class="bi bi-people-fill"></i> Cadastro de Clientes</a>
+</div>
+
+<div class="row g-3">
+    <div class="col-md-4">
+        <div class="card cad-card h-100">
+            <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-people text-primary"></i> Clientes</h5>
+                <p class="card-text">Cadastre, consulte, altere e exclua clientes.</p>
+                <a href="@Url.Action("Index", "Cliente")" class="btn btn-primary">Abrir</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card cad-card h-100">
+            <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-person-badge text-secondary"></i> Usuários</h5>
+                <p class="card-text">Será desenvolvido na avaliação final.</p>
+                <a href="#" class="btn btn-outline-secondary disabled">Em breve</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card cad-card h-100">
+            <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-mortarboard text-secondary"></i> Alunos</h5>
+                <p class="card-text">Será desenvolvido na avaliação final.</p>
+                <a href="#" class="btn btn-outline-secondary disabled">Em breve</a>
+            </div>
+        </div>
+    </div>
+</div>

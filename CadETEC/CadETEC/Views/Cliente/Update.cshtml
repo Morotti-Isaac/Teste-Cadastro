@@ -1,0 +1,19 @@
+@model Model.Entity.Cliente
+@{
+    ViewBag.Title = "Alterar Cliente";
+}
+
+<h2 class="text-info mb-3"><i class="bi bi-pencil-square"></i> Alterar Cliente #@Model.idCliente</h2>
+
+<div class="card cad-card">
+    <div class="card-body">
+        @using (Html.BeginForm("Update", "Cliente", FormMethod.Post))
+        {
+            @Html.Partial("_Form", Model)
+            <div class="mt-4 d-flex gap-2">
+                <button type="submit" class="btn btn-primary"><i class="bi bi-check-lg"></i> Salvar alterações</button>
+                <a class="btn btn-outline-secondary" href="@Url.Action("Index", "Cliente")">Cancelar</a>
+            </div>
+        }
+    </div>
+</div>

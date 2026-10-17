@@ -1,0 +1,6 @@
+body { background-color: #f4f6f9; }
+.cad-hero { background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%); color: #fff; border-radius: .75rem; }
+.cad-card { border: 0; box-shadow: 0 2px 8px rgba(0,0,0,.08); border-radius: .75rem; }
+.table thead th { white-space: nowrap; }
+.table td .btn { margin-right: .15rem; }
+footer { color: #6c757d; }

@@ -1,0 +1,27 @@
+@model Model.Entity.Cliente
+@{
+    ViewBag.Title = "Dados do Cliente";
+}
+
+<h2 class="text-success mb-3"><i class="bi bi-person-vcard"></i> Dados do Cliente</h2>
+
+<div class="card cad-card">
+    <div class="card-body">
+        <dl class="row mb-0">
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.idCliente)</dt>
+            <dd class="col-sm-9">@Model.idCliente</dd>
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.nome)</dt>
+            <dd class="col-sm-9">@Model.nome</dd>
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.cpf)</dt>
+            <dd class="col-sm-9">@Model.cpfFormatado</dd>
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.endereco)</dt>
+            <dd class="col-sm-9">@Model.endereco</dd>
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.telefone)</dt>
+            <dd class="col-sm-9">@Model.telefone</dd>
+        </dl>
+    </div>
+    <div class="card-footer bg-transparent d-flex gap-2">
+        <a class="btn btn-info text-white" href="@Url.Action("Update", "Cliente", new { id = Model.idCliente })"><i class="bi bi-pencil-square"></i> Alterar</a>
+        <a class="btn btn-outline-secondary" href="@Url.Action("Index", "Cliente")">Voltar</a>
+    </div>
+</div>

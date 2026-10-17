@@ -1,0 +1,32 @@
+@model Model.Entity.Cliente
+
+@Html.AntiForgeryToken()
+@Html.HiddenFor(m => m.idCliente)
+
+@if (ViewBag.Erro != null)
+{
+    <div class="alert alert-danger"><i class="bi bi-exclamation-triangle-fill"></i> @ViewBag.Erro</div>
+}
+
+<div class="row g-3">
+    <div class="col-md-8">
+        @Html.LabelFor(m => m.nome, new { @class = "form-label" })
+        @Html.TextBoxFor(m => m.nome, new { @class = "form-control", maxlength = 30, autofocus = "autofocus" })
+        @Html.ValidationMessageFor(m => m.nome, "", new { @class = "text-danger small" })
+    </div>
+    <div class="col-md-4">
+        @Html.LabelFor(m => m.cpf, new { @class = "form-label" })
+        @Html.TextBoxFor(m => m.cpf, new { @class = "form-control", maxlength = 14, placeholder = "Somente números", inputmode = "numeric" })
+        @Html.ValidationMessageFor(m => m.cpf, "", new { @class = "text-danger small" })
+    </div>
+    <div class="col-md-8">
+        @Html.LabelFor(m => m.endereco, new { @class = "form-label" })
+        @Html.TextBoxFor(m => m.endereco, new { @class = "form-control", maxlength = 50 })
+        @Html.ValidationMessageFor(m => m.endereco, "", new { @class = "text-danger small" })
+    </div>
+    <div class="col-md-4">
+        @Html.LabelFor(m => m.telefone, new { @class = "form-label" })
+        @Html.TextBoxFor(m => m.telefone, new { @class = "form-control", maxlength = 15, placeholder = "(16) 99999-9999", type = "tel" })
+        @Html.ValidationMessageFor(m => m.telefone, "", new { @class = "text-danger small" })
+    </div>
+</div>
